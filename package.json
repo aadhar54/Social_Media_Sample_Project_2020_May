@@ -2,11 +2,12 @@
   "name": "social-media-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "mocha test/setup.js test/**/*.test.js",
-    "cover": "nyc --reporter=lcov npm run test"
+    "cover": "nyc --reporter=lcov npm run test",
+    "dev":"nodemon ./src/server.js"
   },
   "author": "",
   "license": "ISC",

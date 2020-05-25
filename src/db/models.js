@@ -7,12 +7,18 @@ if (process.env.NODE_ENV == 'testing') {
     storage: ':memory:',
   })
 } else {
-  db = new Sequelize({
-    dialect: 'mysql',
-    database: 'cbsocialmediadb',
-    username: 'cbsocialuser',
-    password: 'cbsocialpass',
+  // db = new Sequelize({
+  //   dialect: 'mysql',
+  //   database: 'cbsocialmediadb',
+  //   username: 'cbsocialuser',
+  //   password: 'cbsocialpass',
+  // })
+
+  db =new Sequelize('mediadb', 'usr', 'Aadhar10!', {
+    host: 'localhost',
+    dialect: 'mysql'
   })
+
 }
 
 const COL_ID_DEF = {
